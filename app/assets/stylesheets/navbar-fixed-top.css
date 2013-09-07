@@ -1,0 +1,13 @@
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+
+.navbar-brand {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.container {
+  font-family: 'Open Sans', sans-serif;
+}
+
