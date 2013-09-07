@@ -1,7 +1,10 @@
 Vlm::Application.routes.draw do
+  get "movie/index"
+  get "movie/show"
   devise_for :users
   get "navigation/index"
   get 'about/' => 'navigation#about'
+  get 'movies/' => 'movies/index'
   root 'navigation#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
