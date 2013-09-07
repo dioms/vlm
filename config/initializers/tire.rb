@@ -1,3 +1,3 @@
 Tire.configure do
-  url 'http://ec2-54-215-214-58.us-west-1.compute.amazonaws.com:9300'
+  url 'http://chxyerlb:esovbejkydt1uwwd@elm-3051022.us-east-1.bonsai.io'
 end
