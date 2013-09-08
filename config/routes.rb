@@ -5,6 +5,7 @@ Vlm::Application.routes.draw do
   get 'about/' => 'navigation#about'
   resources :movies, only: [:index, :show]
   get 'search', to: 'movies#search', as: :search
+  get 'proxy' => 'proxy#get', :as => 'proxy'
   root 'navigation#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -46,7 +47,7 @@ Vlm::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

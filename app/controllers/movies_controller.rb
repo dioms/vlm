@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   def index
     @movies = Tire.search 'vlm' do
       query do
-        string '*' 
+        string '*'
       end
     end
   end
@@ -17,10 +17,8 @@ class MoviesController < ApplicationController
 
   def search
     query = params[:query]
-    @movies = Tire.search 'vlm' do
-      query { string query }
-    end
-    render :json => @movies
+    @movies = Tire.search 'vlm', :query => { :prefix => { :title => query } }
+    render :json => {:hits => @movies.results}
   end
 
 end

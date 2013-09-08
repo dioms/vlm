@@ -15,3 +15,6 @@
 /log/*.log
 /tmp
 *.swp
+
+# MACSHIT
+.DS_Store
