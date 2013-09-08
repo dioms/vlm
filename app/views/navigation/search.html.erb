@@ -1,7 +1,8 @@
-<%= form_tag search_path, method: :get, class: "form-inline" do %>
-  <%= text_field_tag :query, params[:query], placeholder: 'e.g. Shawshank', class: "form-control input-lg query" %>
-  <%= submit_tag('Search', class: "btn btn-primary btn-lg") %>
-<% end %>
+<div class="row">
+    <div class="col-lg-12 movie-search">
+        <input type="search" class="form-control input-lg query" placeholder="e.g. Shawshank">
+    </div>
+</div>
 
 <script type="x-template/mustache" id="template-dropdown">
     <div class="row">
@@ -32,5 +33,7 @@
                 }
             }
         });
+
+        $('.tt-hint').addClass('form-control input-lg');
     });
 </script>

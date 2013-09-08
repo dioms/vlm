@@ -44,3 +44,7 @@
 .tt-suggestion p {
   margin: 0;
 }
+
+.movie-search input {
+  width: 1000px;
+}
