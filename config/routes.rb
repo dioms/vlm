@@ -1,10 +1,10 @@
 Vlm::Application.routes.draw do
   devise_for :users
   get "navigation/index"
-  get 'search_page/' => 'navigation#search'
+  get 'search/' => 'navigation#search'
   get 'about/' => 'navigation#about'
   resources :movies, only: [:index, :show]
-  get 'search', to: 'movies#search', as: :search
+  get 'api/search/', to: 'movies#search', as: :api_search
   get 'proxy' => 'proxy#get', :as => 'proxy'
   root 'navigation#index'
   # The priority is based upon order of creation: first created -> highest priority.
